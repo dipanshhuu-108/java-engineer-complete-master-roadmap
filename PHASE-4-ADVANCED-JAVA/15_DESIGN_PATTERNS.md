@@ -1,0 +1,234 @@
+# DESIGN PATTERNS
+
+## Creational Patterns
+- Singleton Pattern
+  - Single Instance
+  - Eager Initialization
+  - Lazy Initialization
+  - Double-checked Locking
+  - Bill Pugh Singleton
+  - Enum Singleton
+- Factory Pattern
+  - Simple Factory
+  - Factory Method
+  - Abstract Factory
+  - Object Creation Abstraction
+- Builder Pattern
+  - Complex Object Construction
+  - Fluent API
+  - Immutable Objects
+  - Step-by-step Building
+- Prototype Pattern
+  - Object Cloning
+  - Shallow vs Deep Copy
+  - Prototype Registry
+  - Prototype Manager
+- Object Pool Pattern
+  - Resource Reuse
+  - Connection Pooling
+  - Thread Pool
+
+## Structural Patterns
+- Adapter Pattern
+  - Interface Compatibility
+  - Class Adapter
+  - Object Adapter
+  - Two-way Adapter
+- Decorator Pattern
+  - Dynamic Behavior Addition
+  - Wrapper Pattern
+  - Composition Over Inheritance
+  - Stream Decorators
+- Facade Pattern
+  - Simplified Interface
+  - Subsystem Abstraction
+  - Complex System Simplification
+- Proxy Pattern
+  - Access Control
+  - Lazy Loading
+  - Remote Proxy
+  - Virtual Proxy
+  - Protection Proxy
+- Bridge Pattern
+  - Abstraction and Implementation Separation
+  - Multiple Hierarchies
+  - Flexibility
+- Composite Pattern
+  - Tree Structures
+  - Part-whole Hierarchy
+  - Recursive Composition
+- Flyweight Pattern
+  - Object Sharing
+  - Memory Optimization
+  - Intrinsic State
+  - Extrinsic State
+
+## Behavioral Patterns
+- Strategy Pattern
+  - Algorithm Encapsulation
+  - Runtime Selection
+  - Comparable and Comparator
+  - Lambda Expressions
+- Observer Pattern
+  - Event Notification
+  - Publish-subscribe
+  - Loose Coupling
+  - Event Listeners
+- Command Pattern
+  - Action Encapsulation
+  - Undo/Redo
+  - Command Queue
+  - Macro Commands
+- State Pattern
+  - State-dependent Behavior
+  - State Transitions
+  - Context
+  - State Encapsulation
+- Template Method Pattern
+  - Algorithm Skeleton
+  - Hook Methods
+  - Inheritance-based
+  - Customization Points
+- Iterator Pattern
+  - Sequential Access
+  - Unified Traversal
+  - Iterator Interface
+  - Composite Iterator
+- Visitor Pattern
+  - Operation on Elements
+  - Double Dispatch
+  - Complex Structures
+  - Extensibility
+- Chain of Responsibility
+  - Request Handling Chain
+  - Partial Processing
+  - Filter Chains
+  - Servlet Filters
+- Mediator Pattern
+  - Centralized Control
+  - Component Decoupling
+  - Complex Interactions
+  - Dialog Coordinator
+- Memento Pattern
+  - State Capture
+  - Undo Mechanism
+  - Encapsulation
+  - History Management
+- Interpreter Pattern
+  - Grammar Representation
+  - Language Implementation
+  - Expression Trees
+
+## Enterprise Patterns
+- Dependency Injection
+  - Inversion of Control
+  - Constructor Injection
+  - Setter Injection
+  - Interface Injection
+  - Spring Framework
+- Service Locator
+  - Service Registry
+  - Centralized Lookup
+  - Service Resolution
+- Repository Pattern
+  - Data Access Abstraction
+  - Collection-like Interface
+  - Query Abstraction
+  - Entity Management
+- Unit of Work Pattern
+  - Transaction Management
+  - Change Tracking
+  - Batch Operations
+  - Commit Strategy
+- Data Mapper
+  - Domain-Database Separation
+  - Data Mapping
+  - ORM Implementation
+- Active Record
+  - Domain-aware Persistence
+  - Self-persisting Objects
+  - Domain Logic Integration
+- Value Object
+  - Immutable Objects
+  - Identity vs Equality
+  - Replacement Strategy
+
+## Architectural Patterns
+- Model-View-Controller (MVC)
+  - Separation of Concerns
+  - Model: Data
+  - View: Presentation
+  - Controller: Logic
+- Model-View-Presenter (MVP)
+  - Enhanced MVC
+  - Presenter: Logic Coordination
+  - Thin View
+  - Testability
+- Model-View-ViewModel (MVVM)
+  - Data Binding
+  - View Independence
+  - ViewModel: Presentation Logic
+- Model-View-Intent (MVI)
+  - Unidirectional Data Flow
+  - Intent-driven
+  - Immutable State
+- Hexagonal Architecture
+  - Ports and Adapters
+  - Dependency Inversion
+  - Framework Independence
+  - Testability
+- Clean Architecture
+  - Concentric Layers
+  - Dependency Rule
+  - Framework Agnostic
+  - Testable
+- Event Sourcing
+  - Event-based State
+  - Event Log
+  - State Reconstruction
+  - Audit Trail
+- CQRS
+  - Command Query Responsibility Segregation
+  - Separate Read and Write
+  - Scalability
+  - Consistency Models
+
+## Concurrency Patterns
+- Active Object
+  - Asynchronous Method Execution
+  - Thread per Object
+  - Message Passing
+- Monitor Object
+  - Thread-safe Objects
+  - Synchronized Access
+  - Condition Synchronization
+- Thread Pool
+  - Fixed Thread Pool
+  - Task Queue
+  - Work Distribution
+- Producer-Consumer
+  - Buffered Exchange
+  - Rate Balancing
+  - Decoupling
+- Reader-Writer Lock
+  - Multiple Readers
+  - Exclusive Writer
+  - Optimization
+
+## Integration Patterns
+- Pipes and Filters
+  - Chain Processing
+  - Independent Stages
+  - Data Flow
+- Publish-Subscribe
+  - Event Broadcasting
+  - Loose Coupling
+  - Multiple Subscribers
+- Message Queue
+  - Asynchronous Communication
+  - Guaranteed Delivery
+  - Temporal Decoupling
+- Saga Pattern
+  - Distributed Transactions
+  - Choreography
+  - Orchestration
