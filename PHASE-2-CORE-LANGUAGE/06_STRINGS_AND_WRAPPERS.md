@@ -340,3 +340,101 @@
   - Financial Calculations
   - Money Handling
   - Scientific Calculations
+
+## COLLECTIONS FRAMEWORK
+
+## Core Interfaces
+- Iterable
+- Collection
+- List
+- Set
+- Queue
+- Deque
+- Map
+- SortedSet
+- NavigableSet
+- SortedMap
+- NavigableMap
+
+## List Implementations
+- ArrayList
+- LinkedList
+- Vector
+- Stack
+
+## Queue Implementations
+- PriorityQueue
+- ArrayDeque
+- BlockingQueue
+- DelayQueue
+- TransferQueue
+
+## Set Implementations
+- HashSet
+- LinkedHashSet
+- TreeSet
+- EnumSet
+- CopyOnWriteArraySet
+
+## Map Implementations
+- HashMap
+- LinkedHashMap
+- TreeMap
+- Hashtable
+- WeakHashMap
+- IdentityHashMap
+- EnumMap
+- ConcurrentHashMap
+- ConcurrentSkipListMap
+
+## Iterator and Iteration
+- Iterator Interface
+- Iterating Collections
+- Iterator Behavior
+- ListIterator
+
+## Spliterator
+- Spliterator Interface
+- Parallel Iteration
+- Stream API Integration
+
+## Comparable and Comparator
+- Comparable Interface
+- Comparator Interface
+- Sorting Strategies
+
+## Collections Utility
+- Collections Class Methods
+- Synchronization Wrappers
+- Immutable Collections Wrappers
+
+## Immutable Collections
+- Java 9 Factory Methods
+- Immutable Collection Benefits
+
+## Fail-Fast
+- Fail-fast Iterator
+- ConcurrentModificationException
+
+## Fail-Safe
+- Fail-safe Iterator
+- Concurrent Collections
+
+## Hashing Internals
+- Hash Function
+- Hash Collision
+- Load Factor
+
+## HashMap Internals
+- Hash Table Structure
+- Insertion Process
+- Resizing Mechanism
+
+## TreeMap Internals
+- Red-Black Tree Structure
+- Tree Operations
+
+## Collection Complexity Analysis
+- Time Complexity
+- Space Complexity
+- Selection Criteria
