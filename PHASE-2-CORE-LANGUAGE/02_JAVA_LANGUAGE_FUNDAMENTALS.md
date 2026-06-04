@@ -1,0 +1,279 @@
+# JAVA LANGUAGE FUNDAMENTALS
+
+## Java Evolution
+- Java 8 Features
+  - Lambda Expressions
+  - Functional Interfaces
+  - Stream API
+  - Default Methods in Interfaces
+  - Static Methods in Interfaces
+  - Optional
+  - Method References
+  - Date/Time API (java.time)
+- Java 9 Features
+  - Module System (JPMS)
+  - Process API
+  - HTML5 Javadoc
+  - Diamond Operator Enhancement
+  - Private Methods in Interfaces
+  - Try-with-resources Enhancement
+  - Flow API (Reactive Streams)
+- Java 11 Features (LTS)
+  - Local Variable Type Inference (var)
+  - HTTP Client API
+  - String Methods (isBlank, lines, strip, repeat)
+  - File Methods
+  - Predicate.not()
+  - Launch Single-File Source Code
+  - Nest-based Access Control
+- Java 17 Features (LTS)
+  - Sealed Classes
+  - Pattern Matching for switch (preview)
+  - Records (preview, then finalized)
+  - Text Blocks (finalized)
+  - Strong Encapsulation of JDK Internals
+- Java 21 Features (LTS)
+  - Virtual Threads
+  - Structured Concurrency
+  - Pattern Matching Enhancements
+  - Record Patterns
+  - Switch Pattern Matching (finalized)
+- Latest LTS Features
+  - Performance Improvements
+  - Security Enhancements
+  - Deprecations and Removals
+
+## Java Platform
+- JDK (Java Development Kit)
+  - Compiler (javac)
+  - Tools (jar, javadoc, jps, jstack, jmap, jcmd)
+  - Libraries and APIs
+- JRE (Java Runtime Environment)
+  - JVM
+  - Libraries
+  - Runtime Components
+- JVM (Java Virtual Machine)
+  - JVM Specifications
+  - Multi-platform Support
+  - Memory Management
+  - Garbage Collection
+- Bytecode
+  - Bytecode Instructions
+  - Class File Format
+  - Bytecode Verification
+- Class Loader
+  - Bootstrap Class Loader
+  - Extension Class Loader
+  - Application Class Loader
+  - Custom Class Loaders
+  - Class Loading Process
+  - Delegation Model
+- JIT Compiler
+  - C1 Compiler
+  - C2 Compiler
+  - Tiered Compilation
+  - Compilation Thresholds
+- Java Execution Flow
+  - Source Code → Bytecode → Execution
+  - JVM Startup
+  - Class Initialization
+
+## Basic Syntax
+- Variables
+  - Primitive Variables
+  - Reference Variables
+  - Variable Scope
+  - Variable Lifetime
+  - Stack vs Heap Storage
+- Constants
+  - final Keyword
+  - Constant Naming Convention
+  - Static Final Constants
+- Literals
+  - Integer Literals (decimal, octal, hex, binary)
+  - Floating-point Literals (float, double)
+  - Boolean Literals
+  - String Literals
+  - Character Literals
+  - Null Literal
+- Data Types
+  - Primitive Types
+    - byte (8-bit)
+    - short (16-bit)
+    - int (32-bit)
+    - long (64-bit)
+    - float (32-bit IEEE 754)
+    - double (64-bit IEEE 754)
+    - boolean (true/false)
+    - char (16-bit Unicode)
+  - Reference Types
+    - Classes
+    - Interfaces
+    - Arrays
+    - Enums
+- Type Conversion
+  - Implicit Conversion (Widening)
+  - Explicit Conversion (Narrowing)
+  - String Conversion
+  - Numeric Promotions
+- Operators
+  - Arithmetic Operators (+, -, *, /, %)
+  - Assignment Operators (=, +=, -=, *=, /=, %=)
+  - Comparison Operators (==, !=, <, >, <=, >=)
+  - Logical Operators (&&, ||, !)
+  - Bitwise Operators (&, |, ^, ~, <<, >>, >>>)
+  - Ternary Operator (?:)
+  - instanceof Operator
+  - Operator Precedence
+- Expressions
+  - Expression Evaluation
+  - Expression Types
+  - Expression Statements
+- Statements
+  - Simple Statements
+  - Compound Statements
+  - Declaration Statements
+  - Expression Statements
+- Input Output
+  - System.out.println()
+  - System.out.print()
+  - System.err
+  - Scanner Class
+  - BufferedReader
+  - PrintWriter
+- Comments
+  - Single-line Comments (//)
+  - Multi-line Comments (/* */)
+  - Javadoc Comments (/** */)
+  - Documentation Tags (@param, @return, @throws, @deprecated)
+
+## Control Flow
+- if Statement
+  - Syntax
+  - Boolean Conditions
+  - Single Statement vs Block
+- if-else Statement
+  - Two-way Decision
+- Nested if Statements
+  - Multiple Levels of Nesting
+  - else-if Chains
+- switch Statement
+  - Case Labels
+  - Default Case
+  - Break Statement
+  - Fall-through Behavior
+  - String in Switch (Java 7+)
+  - Enum in Switch
+- switch Expressions (Java 12+)
+  - Arrow Syntax (->)
+  - Expression Values
+  - Default Case
+- for Loop
+  - Initialization
+  - Condition
+  - Increment
+  - Loop Body
+  - Nested for Loops
+- Enhanced for Loop
+  - Iteration over Arrays
+  - Iteration over Collections
+  - Range-based Iteration
+- while Loop
+  - Pre-test Condition
+  - Loop Continuation
+- do-while Loop
+  - Post-test Condition
+  - At Least One Execution
+- break Statement
+  - Loop Termination
+  - Switch Termination
+  - Labeled break
+- continue Statement
+  - Skip to Next Iteration
+  - Labeled continue
+- Labels
+  - Label Naming
+  - Labeled break and continue
+
+## Arrays
+- Single Dimension Arrays
+  - Array Declaration
+  - Array Initialization
+  - Array Access
+  - Array Length
+  - Array Iteration
+  - Array Copying
+- Multi Dimension Arrays
+  - 2D Arrays
+  - 3D Arrays
+  - Higher Dimensional Arrays
+  - Row-major Order
+- Jagged Arrays
+  - Irregular Arrays
+  - Variable Row Sizes
+- Arrays Utility Class
+  - Arrays.sort()
+  - Arrays.binarySearch()
+  - Arrays.equals()
+  - Arrays.deepEquals()
+  - Arrays.fill()
+  - Arrays.copyOf()
+  - Arrays.copyOfRange()
+  - Arrays.toString()
+  - Arrays.deepToString()
+  - Arrays.stream()
+- Array Algorithms
+  - Searching
+  - Sorting
+  - Reversing
+  - Rotating
+  - Shuffling
+
+## Methods
+- Method Declaration
+  - Method Signature
+  - Access Modifiers
+  - Return Type
+  - Method Name
+  - Parameters
+  - throws Clause
+  - Method Body
+- Method Invocation
+  - Instance Method Call
+  - Static Method Call
+  - Method Arguments
+  - Return Value
+- Return Types
+  - void Return
+  - Primitive Returns
+  - Reference Returns
+  - return Statement
+- Parameters
+  - Formal Parameters
+  - Actual Arguments
+  - Pass by Value
+  - Pass by Reference (for objects)
+  - Parameter Passing Mechanism
+- Method Overloading
+  - Same Method Name
+  - Different Parameter Lists
+  - Overloading Rules
+  - Return Type Not Part of Signature
+- Varargs
+  - Variable-length Arguments
+  - Syntax (...)
+  - Accessing Varargs
+  - Overloading with Varargs
+- Recursion
+  - Base Case
+  - Recursive Case
+  - Call Stack
+  - Stack Overflow
+  - Tail Recursion
+  - Factorial Example
+  - Fibonacci Example
+- Stack Frames
+  - Frame Creation
+  - Local Variables
+  - Operand Stack
+  - Frame Destruction

@@ -1,0 +1,454 @@
+# COLLECTIONS FRAMEWORK
+
+## Core Interfaces
+- Iterable
+  - iterator() Method
+  - forEach() Default Method
+  - Iteration Protocol
+- Collection
+  - Common Operations
+  - add(), remove(), contains()
+  - size(), isEmpty()
+  - toArray()
+  - stream(), parallelStream()
+- List
+  - Ordered Collection
+  - get(int index)
+  - add(int index, Object element)
+  - remove(int index)
+  - indexOf(), lastIndexOf()
+  - subList()
+  - Duplicate Elements Allowed
+- Set
+  - Unique Elements
+  - No Duplicates
+  - No Specific Order (except SortedSet)
+  - Equality-based
+- Queue
+  - FIFO Data Structure
+  - add(), offer() (insertion)
+  - remove(), poll() (deletion)
+  - element(), peek() (inspection)
+- Deque
+  - Double-ended Queue
+  - First and Last Element Access
+  - addFirst(), addLast()
+  - removeFirst(), removeLast()
+  - getFirst(), getLast()
+- Map
+  - Key-Value Pairs
+  - put(key, value)
+  - get(key)
+  - remove(key)
+  - containsKey(), containsValue()
+  - keySet(), values(), entrySet()
+  - No Duplicate Keys
+- SortedSet
+  - Sorted Elements
+  - first(), last()
+  - headSet(), tailSet(), subSet()
+  - Comparator
+- NavigableSet (Java 6+)
+  - Sorted Set with Navigation
+  - lower(), higher(), floor(), ceiling()
+  - pollFirst(), pollLast()
+- SortedMap
+  - Sorted by Key
+  - firstKey(), lastKey()
+  - headMap(), tailMap(), subMap()
+- NavigableMap (Java 6+)
+  - Sorted Map with Navigation
+  - lowerKey(), higherKey(), floorKey(), ceilingKey()
+  - pollFirstEntry(), pollLastEntry()
+
+## List Implementations
+- ArrayList
+  - Dynamic Array
+  - Random Access (O(1))
+  - add() O(1) amortized
+  - remove(int) O(n)
+  - Capacity Management
+  - ensureCapacity()
+  - trimToSize()
+  - Thread-unsafe
+  - Serializable
+- LinkedList
+  - Doubly-linked List
+  - Sequential Access O(n)
+  - add()/remove() O(1) at ends
+  - Implements both List and Deque
+  - removeFirst(), removeLast()
+  - Slower than ArrayList for random access
+  - Thread-unsafe
+  - Serializable
+- Vector
+  - Legacy Synchronized ArrayList
+  - Thread-safe
+  - Slower Performance
+  - Deprecated in Modern Code
+  - Synchronization Overhead
+- Stack
+  - Last-In-First-Out (LIFO)
+  - push(), pop(), peek()
+  - search()
+  - Extends Vector
+  - Thread-safe
+  - Deprecated: Use Deque with ArrayDeque
+
+## Queue Implementations
+- PriorityQueue
+  - Min-Heap by Default
+  - Elements Ordered by Priority
+  - Comparator-based
+  - add() O(log n)
+  - remove()/poll() O(log n)
+  - peek() O(1)
+  - Thread-unsafe
+- ArrayDeque
+  - Double-ended Queue Implementation
+  - Resizable Array
+  - Faster than LinkedList for queue operations
+  - add()/remove() O(1)
+  - Random Access
+  - Thread-unsafe
+  - No Null Elements
+- BlockingQueue
+  - Thread-safe Queue
+  - put(), take() (blocking operations)
+  - offer(), poll() with timeout
+  - capacity()
+  - Implementations: LinkedBlockingQueue, ArrayBlockingQueue, PriorityBlockingQueue
+- DelayQueue
+  - Elements Have Delay
+  - Elements Expire After Delay
+  - BlockingQueue Implementation
+  - Delayed Interface
+- TransferQueue
+  - Producer-Consumer Pattern
+  - transfer() Method (blocking)
+  - tryTransfer()
+  - Implementations: LinkedTransferQueue
+
+## Set Implementations
+- HashSet
+  - Hash Table Implementation
+  - O(1) average add/remove/contains
+  - Unordered
+  - No Duplicates
+  - Null Element Allowed
+  - Thread-unsafe
+  - Serializable
+  - Hash Collision Handling
+- LinkedHashSet
+  - Hash Set with Insertion Order
+  - Doubly-linked Hash Table
+  - O(1) add/remove/contains
+  - Maintains Insertion Order
+  - Slightly Slower than HashSet
+  - Thread-unsafe
+- TreeSet
+  - Red-Black Tree Implementation
+  - O(log n) add/remove/contains
+  - Sorted Order
+  - Comparator or Natural Ordering
+  - NavigableSet Implementation
+  - No Null Elements (unless custom Comparator)
+  - Thread-unsafe
+- EnumSet
+  - Set of Enum Constants
+  - Bit Vector Implementation
+  - O(1) Operations
+  - Very Efficient for Enum Types
+  - allOf(), noneOf()
+  - Range Methods
+  - Thread-unsafe
+  - complementOf()
+- CopyOnWriteArraySet
+  - Thread-safe Set
+  - Copy-on-write Semantics
+  - Immutable Snapshot for Iteration
+  - Slow write operations
+  - Fast read operations
+  - Suitable for read-heavy workloads
+
+## Map Implementations
+- HashMap
+  - Hash Table Implementation
+  - O(1) average get/put/remove
+  - Unordered
+  - Allows Null Key (one) and Null Values
+  - Thread-unsafe
+  - Serializable
+  - Load Factor
+  - Capacity and Resizing
+  - Collision Resolution (Chaining, Red-Black Tree in Java 8+)
+- LinkedHashMap
+  - Hash Map with Insertion/Access Order
+  - Doubly-linked Hash Table
+  - O(1) Operations
+  - Maintains Insertion or Access Order
+  - accessOrder Flag
+  - LRU Cache Implementation
+  - Thread-unsafe
+- TreeMap
+  - Red-Black Tree Implementation
+  - O(log n) Operations
+  - Sorted by Key
+  - Natural Ordering or Comparator
+  - NavigableMap Implementation
+  - firstEntry(), lastEntry()
+  - subMap(), headMap(), tailMap()
+  - No Null Keys (unless custom Comparator)
+  - Thread-unsafe
+- Hashtable
+  - Legacy Synchronized HashMap
+  - Thread-safe
+  - Slower Performance
+  - Synchronization Overhead
+  - Deprecated in Modern Code
+  - No Null Keys or Values
+- WeakHashMap
+  - Weak Reference Keys
+  - Keys Eligible for Garbage Collection
+  - Automatic Removal of Entries
+  - Memory-efficient for Caches
+  - O(1) average Operations
+  - Thread-unsafe
+- IdentityHashMap
+  - Uses Object Identity (==) Instead of equals()
+  - Reference-based Equality
+  - O(1) average Operations
+  - Special Use Cases
+  - Thread-unsafe
+- EnumMap
+  - Map with Enum Keys
+  - Array-based Implementation
+  - O(1) Operations
+  - Very Efficient for Enum Keys
+  - Compact Representation
+  - No Null Keys (unless custom Comparator)
+  - Thread-unsafe
+- ConcurrentHashMap
+  - Thread-safe HashMap
+  - Fine-grained Locking (Segment/Bucket level)
+  - Better Performance than Hashtable
+  - Null Key/Value Not Allowed
+  - Atomic Operations (putIfAbsent, replace)
+  - Iteration-friendly
+  - Memory Consistent Operations
+- ConcurrentSkipListMap
+  - Thread-safe Sorted Map
+  - Skip List Implementation
+  - O(log n) Operations
+  - Lock-free Algorithms
+  - NavigableMap Implementation
+  - firstEntry(), lastEntry()
+  - Range Operations
+
+## Iterator and Iteration
+- Iterator Interface
+  - hasNext()
+  - next()
+  - remove()
+  - forEachRemaining() (Java 8+)
+- Iterating Collections
+  - while (iterator.hasNext())
+  - Enhanced for Loop
+  - forEach() Method
+- Iterator Behavior
+  - Fail-fast vs Fail-safe
+  - ConcurrentModificationException
+  - Iterator Remove Safety
+- ListIterator
+  - Bidirectional Iteration
+  - hasPrevious()
+  - previous()
+  - nextIndex(), previousIndex()
+  - set()
+  - add()
+  - Only for List Collections
+
+## Spliterator
+- Spliterator Interface (Java 8+)
+- tryAdvance()
+- trySplit()
+- estimateSize()
+- getExactSizeIfKnown()
+- characteristics()
+  - ORDERED, DISTINCT, SORTED, SIZED, SUBSIZED, NONNULL, IMMUTABLE, CONCURRENT
+- Parallel Iteration
+- Stream API Integration
+- Custom Spliterator Implementation
+
+## Comparable and Comparator
+- Comparable Interface
+  - compareTo() Method
+  - Natural Ordering
+  - Single Comparison Strategy
+  - Implementation by Class
+  - Sorting Collections
+- Comparator Interface
+  - compare() Method
+  - Custom Ordering
+  - Multiple Strategies
+  - External Strategy Implementation
+  - Standalone Comparators
+  - Default Comparator (Java 8+)
+  - reversed()
+  - thenComparing()
+  - comparing()
+  - Null Handling
+- Comparable vs Comparator
+- Sorting by Multiple Criteria
+  - thenComparing() Chaining
+  - Complex Comparators
+
+## Collections Utility
+- Collections Class
+  - sort(List, Comparator)
+  - binarySearch()
+  - reverse()
+  - shuffle()
+  - rotate()
+  - swap()
+  - fill()
+  - copy()
+  - min(), max()
+  - frequency()
+  - replaceAll()
+  - indexOfSubList(), lastIndexOfSubList()
+  - disjoint()
+  - addAll()
+- Synchronization Wrappers
+  - synchronizedList()
+  - synchronizedSet()
+  - synchronizedMap()
+  - synchronizedCollection()
+  - Not True Thread-safety
+  - External Synchronization Required
+- Immutable Collections Wrappers
+  - unmodifiableList()
+  - unmodifiableSet()
+  - unmodifiableMap()
+  - Throws UnsupportedOperationException
+
+## Immutable Collections
+- Java 9 Factory Methods
+  - List.of()
+  - Set.of()
+  - Map.of(), Map.ofEntries()
+- Immutable Collection Benefits
+  - Thread Safety
+  - Caching
+  - Contract Enforcement
+- Immutable vs Unmodifiable
+- Creating Immutable Collections
+- Null Elements in Immutable Collections
+
+## Fail-Fast
+- Fail-fast Iterator
+  - ConcurrentModificationException
+  - Modification Detection
+  - modCount Field
+  - Iterator Validation
+- Triggering Fail-fast
+  - Structural Modification During Iteration
+  - Exception Throwing
+- Fail-fast Safety
+  - Best Effort
+  - Not Guaranteed
+  - Design Pattern
+
+## Fail-Safe
+- Fail-safe Iterator
+  - No Concurrent Modification Exception
+  - Snapshot Iteration
+  - Copy-on-write Collections
+  - Concurrent Collections
+- Examples
+  - CopyOnWriteArrayList
+  - ConcurrentHashMap
+  - ConcurrentSkipListMap
+
+## Hashing Internals
+- Hash Function
+  - hashCode() Contract
+  - Consistency
+  - equals() Contract
+- Hash Collision
+  - Collision Resolution
+  - Separate Chaining (Linked List or Red-Black Tree in Java 8+)
+  - Open Addressing
+- Load Factor
+  - Resize Threshold
+  - Capacity Adjustment
+  - Default Load Factor (0.75)
+- Hash Distribution
+  - Uniform Distribution
+  - Hash Function Quality
+  - Avalanche Effect
+
+## HashMap Internals
+- Hash Table Structure
+  - Bucket Array
+  - Chaining
+  - Red-Black Tree (Java 8+)
+- Node Structure
+  - Key-Value Pair
+  - Hash Value
+  - Next Reference (in chain)
+- Insertion Process
+  - Hash Calculation
+  - Bucket Index
+  - Collision Handling
+  - Resizing
+- Removal Process
+  - Key Search
+  - Node Deletion
+  - Chain Update
+- Resizing Mechanism
+  - Capacity Increase
+  - Rehashing
+  - Performance Impact
+- Tree Conversion (Java 8+)
+  - Chaining to Tree Threshold
+  - Red-Black Tree
+  - Tree Operations
+
+## TreeMap Internals
+- Red-Black Tree Structure
+  - Binary Search Tree
+  - Color Property (Red/Black)
+  - Balance Conditions
+- Node Structure
+  - Key-Value Pair
+  - Left/Right Child
+  - Parent Reference
+  - Color
+- Tree Operations
+  - Insertion
+  - Deletion
+  - Rebalancing
+- Tree Traversal
+  - In-order Traversal (sorted)
+  - Comparator Usage
+- Sorted Guarantees
+  - Ordering Consistency
+  - Range Queries
+
+## Collection Complexity Analysis
+- Time Complexity Table
+  - get, put, remove for each implementation
+  - add, contains, remove for Lists
+- Space Complexity
+  - O(n) for all Collections
+  - Overhead per Implementation
+- Performance Characteristics
+  - ArrayList vs LinkedList
+  - HashMap vs TreeMap
+  - HashSet vs TreeSet
+- Selection Criteria
+  - Ordered vs Unordered
+  - Sorted vs Unsorted
+  - Read-heavy vs Write-heavy
+  - Thread Safety Requirements

@@ -1,0 +1,342 @@
+# STRINGS AND WRAPPERS
+
+## String Pool
+- String Interning
+  - Automatic Interning
+  - intern() Method
+  - Performance Consideration
+- String Constant Pool
+- Heap vs String Pool
+- Memory Efficiency
+- String Immutability
+- String Pool Size Configuration
+
+## String Interning
+- Interning Process
+- intern() Method Behavior
+- Automatic Interning
+  - String Literals
+  - Compile-time Constants
+- Manual Interning
+- Performance Impact
+- intern() Use Cases
+
+## StringBuilder
+- Mutable String Alternative
+- StringBuilder Declaration
+- Append Methods
+  - append(String)
+  - append(int), append(double), etc.
+  - append(Object)
+  - append(char), append(char[])
+  - appendCodePoint(int)
+- Insert Methods
+  - insert(int offset, String str)
+  - insert(int offset, Object obj)
+- Delete Methods
+  - delete(int start, int end)
+  - deleteCharAt(int index)
+- Replace Methods
+  - replace(int start, int end, String str)
+- Other Methods
+  - reverse()
+  - setLength(int newLength)
+  - capacity()
+  - ensureCapacity(int minimumCapacity)
+  - toString()
+- Chaining
+  - Method Chaining
+  - Fluent API
+- Performance Characteristics
+- Single-threaded Operations
+
+## StringBuffer
+- Synchronized Alternative
+- StringBuffer Declaration
+- Same Methods as StringBuilder
+  - append()
+  - insert()
+  - delete()
+  - replace()
+  - reverse()
+- Thread Safety
+  - Synchronized Methods
+  - Lock Overhead
+- Performance Considerations
+- Legacy Class
+- When to Use StringBuffer
+
+## StringTokenizer
+- Token Splitting
+- StringTokenizer Declaration
+  - StringTokenizer(String str)
+  - StringTokenizer(String str, String delim)
+  - StringTokenizer(String str, String delim, boolean returnDelims)
+- Methods
+  - hasMoreTokens()
+  - nextToken()
+  - countTokens()
+  - hasMoreElements()
+  - nextElement()
+- Delimiter Handling
+- Return Delimiters Option
+- Limitations
+- Alternative: String.split()
+
+## Regex (Regular Expressions)
+- Pattern Basics
+  - Character Classes
+  - Quantifiers
+  - Anchors
+  - Alternation
+  - Groups
+- Common Patterns
+  - Email Validation
+  - Phone Number
+  - URL
+  - Date Format
+  - Number Patterns
+- Metacharacters
+  - . * + ? [ ] ( ) { } ^ $ | \
+- Escape Sequences
+  - \d (digit)
+  - \D (non-digit)
+  - \s (whitespace)
+  - \S (non-whitespace)
+  - \w (word character)
+  - \W (non-word)
+  - \b (word boundary)
+- Character Classes
+  - [abc] (a, b, or c)
+  - [^abc] (not a, b, or c)
+  - [a-z] (a through z)
+  - [a-zA-Z0-9]
+- Quantifiers
+  - ? (0 or 1)
+  - * (0 or more)
+  - + (1 or more)
+  - {n} (exactly n)
+  - {n,} (n or more)
+  - {n,m} (n to m)
+  - Greedy vs Non-greedy
+- Groups and Capturing
+  - (pattern) (capturing group)
+  - (?:pattern) (non-capturing group)
+  - (?<name>pattern) (named group, Java 7+)
+
+## Pattern
+- Pattern Compilation
+  - Pattern.compile()
+  - Pattern Flags
+    - Pattern.CASE_INSENSITIVE
+    - Pattern.DOTALL
+    - Pattern.MULTILINE
+    - Pattern.UNICODE_CASE
+    - Pattern.UNIX_LINES
+    - Pattern.LITERAL
+    - Pattern.COMMENTS
+- Pattern Methods
+  - matcher()
+  - split()
+  - asPredicate()
+  - quote()
+- Pattern Caching
+  - Reusing Compiled Patterns
+  - Performance Optimization
+
+## Matcher
+- Matcher Creation
+  - Pattern.matcher()
+- Matching Methods
+  - matches() (entire string)
+  - find() (find next match)
+  - find(int start)
+  - lookingAt() (match at beginning)
+- Replacement Methods
+  - replaceAll()
+  - replaceFirst()
+  - appendReplacement()
+  - appendTail()
+- Group Methods
+  - group() (entire match)
+  - group(int group)
+  - groupCount()
+  - start(), end()
+  - start(int group), end(int group)
+- Matcher State
+  - reset()
+  - region(int start, int end)
+  - hasTransparentBounds()
+  - hasAnchoringBounds()
+
+## Unicode
+- Unicode Basics
+- Character Encoding
+- Unicode Code Points
+- UTF-16 Representation
+- Surrogate Pairs
+- Code Point Operations
+  - codePointAt()
+  - codePointBefore()
+  - codePointCount()
+  - offsetByCodePoints()
+  - toCodePoint()
+- Unicode Blocks
+- Unicode Categories
+
+## Character Encoding
+- Character Set
+  - ASCII
+  - Extended ASCII
+  - Unicode
+  - UTF-8
+  - UTF-16
+  - UTF-32
+- Charset Class
+  - Charset.forName()
+  - StandardCharsets
+- Encoding and Decoding
+  - String.getBytes(Charset)
+  - new String(byte[], Charset)
+  - ByteBuffer encoding/decoding
+- Common Charsets
+  - UTF-8
+  - UTF-16
+  - ISO-8859-1 (Latin-1)
+  - US-ASCII
+
+## Wrapper Classes
+- Byte
+- Short
+- Integer
+- Long
+- Float
+- Double
+- Boolean
+- Character
+- Wrapper Class Features
+  - Immutability
+  - Immutable Caching
+  - Constants (MIN_VALUE, MAX_VALUE)
+  - Conversion Methods
+    - parseInt()
+    - parseDouble()
+    - valueOf()
+    - toString()
+    - toHexString()
+    - toOctalString()
+    - toBinaryString()
+  - Comparison Methods
+  - compare()
+  - equals()
+
+## Autoboxing
+- Automatic Conversion
+  - Primitive to Wrapper
+  - Integer a = 5;
+- Boxing Rules
+- Caching Behavior
+  - Integer Cache (-128 to 127)
+  - Boolean Cache
+  - Character Cache (0 to 127)
+- Performance Implications
+- Type Inference
+
+## Unboxing
+- Automatic Conversion
+  - Wrapper to Primitive
+  - int b = new Integer(5);
+- Unboxing Rules
+- NullPointerException in Unboxing
+- Method Parameter Unboxing
+- Collection Unboxing
+- Performance Implications
+
+## BigInteger
+- Arbitrary Precision Integer
+- BigInteger Declaration
+  - new BigInteger("value")
+  - BigInteger.valueOf(long)
+  - Constants (ZERO, ONE, TEN)
+- Arithmetic Operations
+  - add()
+  - subtract()
+  - multiply()
+  - divide()
+  - remainder()
+  - divideAndRemainder()
+  - pow()
+  - abs()
+  - negate()
+- Bitwise Operations
+  - and()
+  - or()
+  - xor()
+  - not()
+  - shiftLeft()
+  - shiftRight()
+  - bitLength()
+- Comparison Methods
+  - compareTo()
+  - equals()
+  - min()
+  - max()
+- Conversion Methods
+  - toString()
+  - toString(int radix)
+  - toByteArray()
+  - intValue(), longValue()
+- Mathematical Methods
+  - gcd()
+  - isProbablePrime()
+  - modInverse()
+  - modPow()
+- Use Cases
+  - Cryptography
+  - Large Number Calculations
+  - Financial Calculations
+
+## BigDecimal
+- Arbitrary Precision Decimal
+- BigDecimal Declaration
+  - new BigDecimal("value")
+  - new BigDecimal(double) (caution: precision loss)
+  - BigDecimal.valueOf(double)
+  - Constants (ZERO, ONE, TEN)
+- Scale and Precision
+  - Scale (decimal places)
+  - Precision (total digits)
+  - setScale()
+  - stripTrailingZeros()
+- Arithmetic Operations
+  - add()
+  - subtract()
+  - multiply()
+  - divide(MathContext)
+  - remainder()
+  - pow()
+  - abs()
+  - negate()
+- Rounding Modes
+  - RoundingMode enum
+  - HALF_UP
+  - HALF_DOWN
+  - HALF_EVEN
+  - UP, DOWN, CEILING, FLOOR
+  - UNNECESSARY
+- MathContext
+  - Precision and RoundingMode
+  - Predefined Contexts (UNLIMITED, DECIMAL128, DECIMAL64, DECIMAL32)
+- Comparison Methods
+  - compareTo()
+  - equals() (includes scale)
+  - min(), max()
+- Conversion Methods
+  - toString()
+  - toPlainString()
+  - toBigInteger()
+  - doubleValue(), floatValue()
+- Use Cases
+  - Financial Calculations
+  - Money Handling
+  - Scientific Calculations

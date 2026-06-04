@@ -1,0 +1,143 @@
+# COMPUTER FUNDAMENTALS
+
+## Computer Architecture
+- CPU
+- ALU (Arithmetic Logic Unit)
+- Registers
+- Cache Memory
+  - L1 Cache
+  - L2 Cache
+  - L3 Cache
+  - Cache Coherency
+  - Cache Line
+  - False Sharing
+- RAM (Random Access Memory)
+- ROM (Read Only Memory)
+- Storage Devices
+  - SSD
+  - HDD
+  - NVMe
+- Bus Architecture
+  - FSB (Front Side Bus)
+  - QPI (QuickPath Interconnect)
+  - Infinity Fabric
+- Memory Hierarchy
+
+## Operating Systems
+- Process
+  - Process Creation
+  - Process Termination
+  - Process States
+  - Process Control Block (PCB)
+- Thread
+  - Thread Creation
+  - Thread Synchronization
+  - Thread Lifecycle
+- Scheduling
+  - FCFS (First Come First Served)
+  - SJF (Shortest Job First)
+  - Round Robin
+  - Priority Scheduling
+  - Multilevel Queue Scheduling
+- Context Switching
+  - Overhead
+  - Performance Impact
+- Memory Management
+  - Paging
+  - Segmentation
+  - Virtual Memory
+  - TLB (Translation Lookaside Buffer)
+- Virtual Memory
+  - Demand Paging
+  - Page Replacement Algorithms
+  - Thrashing
+- File System
+  - File Organization
+  - Directory Structure
+  - File Allocation Methods
+  - Disk Scheduling
+- Synchronization
+  - Mutex
+  - Semaphore
+  - Monitor
+  - Critical Section
+
+## Networking Basics
+- OSI Model (7 Layers)
+  - Physical Layer
+  - Data Link Layer
+  - Network Layer
+  - Transport Layer
+  - Session Layer
+  - Presentation Layer
+  - Application Layer
+- TCP/IP Model
+  - Link Layer
+  - Internet Layer
+  - Transport Layer
+  - Application Layer
+- IP Address
+  - IPv4
+  - IPv6
+  - CIDR Notation
+  - Subnetting
+- DNS (Domain Name System)
+  - DNS Resolution
+  - DNS Records
+  - DNS Caching
+- Routing
+  - Static Routing
+  - Dynamic Routing
+  - Routing Protocols (BGP, OSPF, RIP)
+- Ports
+  - Well-known Ports (0-1023)
+  - Registered Ports (1024-49151)
+  - Dynamic Ports (49152-65535)
+- TCP (Transmission Control Protocol)
+  - Three-way Handshake
+  - Connection Termination
+  - Flow Control
+  - Congestion Control
+- UDP (User Datagram Protocol)
+  - Connectionless
+  - Unreliable Delivery
+- HTTP (HyperText Transfer Protocol)
+  - HTTP/1.0
+  - HTTP/1.1
+  - HTTP/2
+  - HTTP/3
+  - Methods (GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS)
+  - Status Codes (1xx, 2xx, 3xx, 4xx, 5xx)
+  - Headers
+- HTTPS (HTTP Secure)
+  - HTTPS Protocol
+  - Certificate Authority
+- SSL/TLS (Secure Sockets Layer / Transport Layer Security)
+  - TLS Handshake
+  - Cipher Suites
+  - Certificate Validation
+- WebSocket
+  - WebSocket Protocol
+  - Full-duplex Communication
+  - WebSocket Handshake
+
+## Number Systems
+- Binary
+  - Binary to Decimal
+  - Decimal to Binary
+  - Binary Arithmetic
+- Octal
+- Decimal
+- Hexadecimal
+  - Hex to Decimal
+  - Decimal to Hex
+  - Hex in Programming
+- Bitwise Operations
+  - AND (&)
+  - OR (|)
+  - XOR (^)
+  - NOT (~)
+  - Left Shift (<<)
+  - Right Shift (>>)
+  - Unsigned Right Shift (>>>)
+  - Bit Manipulation Techniques
